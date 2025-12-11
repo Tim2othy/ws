@@ -1,6 +1,4 @@
-My website.
-
-Hi. I'm Timothy Currie.
+Hi.
 
 
 ## Contact

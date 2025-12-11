@@ -1,10 +1,10 @@
 ---
 layout: page
-title: How I Work
+title: Tools and Setup
 permalink: /setup/
 ---
 
-For work I use:
+My setup.
 
 [VS Code](https://code.visualstudio.com/),
 [Typst](https://typst.app/),
