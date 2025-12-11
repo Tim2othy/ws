@@ -1,9 +1,8 @@
 theme: minima
 title: timothy-currie
 author: Timothy Currie
-description: work in progress
+description:
 
 header_pages:
-  - about.md
   - projects.md
   - setup.md
