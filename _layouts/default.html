@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description"
+        content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="site-header">
+                <h1 class="site-title">{{ site.author | escape }}</h1>
+                <p class="site-tagline">{{ site.description }}</p>
+            </div>
+
+            <nav class="site-nav">
+                <a href="{{ '/' | relative_url }}">About</a>
+                {% for page in site.header_pages %}
+                <a href="{{ page | relative_url }}">{{ site.pages | where: 'path', page | map: 'title' | first }}</a>
+                {% endfor %}
+            </nav>
+        </aside>
+
+        <main class="content">
+            {{ content }}
+        </main>
+    </div>
+</body>
+
+</html>

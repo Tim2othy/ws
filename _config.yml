@@ -1,7 +1,16 @@
-theme: minima
 author: Timothy Currie
-description:
+description: Α dot, I hope.
 
 header_pages:
   - projects.md
   - setup.md
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+
+# Exclude from build
+exclude:
+  - .git/
+  - .gitignore
+  - README.md
