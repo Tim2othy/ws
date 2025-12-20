@@ -18,12 +18,11 @@
     <div class="page-container">
         <aside class="sidebar">
             <div class="site-header">
-                <h1 class="site-title">{{ site.author | escape }}</h1>
+                <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.author | escape }}</a></h1>
                 <p class="site-tagline">{{ site.description }}</p>
             </div>
 
             <nav class="site-nav">
-                <a href="{{ '/' | relative_url }}">About</a>
                 {% for item in site.header_pages %}
                 {% assign page_obj = site.pages | where: 'path', item | first %}
                 {% if page_obj %}
