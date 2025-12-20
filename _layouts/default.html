@@ -24,8 +24,11 @@
 
             <nav class="site-nav">
                 <a href="{{ '/' | relative_url }}">About</a>
-                {% for page in site.header_pages %}
-                <a href="{{ page | relative_url }}">{{ site.pages | where: 'path', page | map: 'title' | first }}</a>
+                {% for item in site.header_pages %}
+                {% assign page_obj = site.pages | where: 'path', item | first %}
+                {% if page_obj %}
+                <a href="{{ page_obj.url | relative_url }}">{{ page_obj.title }}</a>
+                {% endif %}
                 {% endfor %}
             </nav>
         </aside>
