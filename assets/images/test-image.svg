@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <rect width="400" height="200" fill="#f0f0f0" rx="8"/>
+  <text x="200" y="90" text-anchor="middle" font-family="serif" font-size="20" fill="#555">Test Image</text>
+  <text x="200" y="120" text-anchor="middle" font-family="serif" font-size="14" fill="#888">Replace me with a real image</text>
+</svg>
