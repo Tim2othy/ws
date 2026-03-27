@@ -4,9 +4,10 @@ title: Drafts
 permalink: /drafts/
 ---
 
-{% assign drafts_alpha = site.collections['drafts'].docs | sort: 'path' %}
+{% assign drafts_collection = site.collections['drafts'] %}
 
-{% if drafts_alpha and drafts_alpha.size > 0 %}
+{% if drafts_collection and drafts_collection.docs and drafts_collection.docs.size > 0 %}
+{% assign drafts_alpha = drafts_collection.docs | sort: 'path' %}
 <ul class="posts-list">
   {% for draft in drafts_alpha %}
   {% assign draft_name = draft.title | default: draft.basename %}
@@ -16,5 +17,5 @@ permalink: /drafts/
   {% endfor %}
 </ul>
 {% else %}
-No drafts yet.
+No drafts are available in this build.
 {% endif %}
