@@ -5,6 +5,7 @@ header_pages:
   - about.md
   - projects.md
   - setup.md
+  - posts.md
   - writing.md
 
 # Build settings

@@ -217,6 +217,28 @@ img {
     font-size: 1.05rem;
 }
 
+.posts-list {
+    list-style: none;
+    padding-left: 0;
+    max-width: 720px;
+}
+
+.posts-list li {
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #ececec;
+}
+
+.posts-list li:last-child {
+    border-bottom: none;
+}
+
+.posts-list-date {
+    display: block;
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+}
 /* ===================================
    RESPONSIVE
    =================================== */
