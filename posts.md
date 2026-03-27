@@ -17,3 +17,5 @@ permalink: /posts/
 {% else %}
 No posts yet.
 {% endif %}
+
+<p><a href="{{ '/drafts/' | relative_url }}">View drafts</a></p>
