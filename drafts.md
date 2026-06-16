@@ -4,10 +4,8 @@ title: Drafts
 permalink: /drafts/
 ---
 
-{% assign drafts_collection = site.collections['drafts'] %}
-
-{% if drafts_collection and drafts_collection.docs and drafts_collection.docs.size > 0 %}
-{% assign drafts_alpha = drafts_collection.docs | sort: 'path' %}
+{% if site.drafts and site.drafts.size > 0 %}
+{% assign drafts_alpha = site.drafts | sort: 'path' %}
 <ul class="posts-list">
   {% for draft in drafts_alpha %}
   {% assign draft_name = draft.title | default: draft.basename %}
