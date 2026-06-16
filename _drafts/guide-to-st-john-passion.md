@@ -1,5 +1,10 @@
 
 
+---
+layout: page
+title: Guide to Bach's St John Passion
+---
+
 Bach's Saint John's Passion is one of the great Barock works. But it can be inaccessible, it's long, in German and some parts of it are boring. It took me a couple of years to learn to love the piece. I would listen to it during easter, and favourite the individual monuments I enjoyed, after a couple years I had around 25 out of the around 60 movements that I liked, and would listen to regularly. A couple movements I really loved.
 
 This guide is split into two part, first an introduction to the piece in general, then I go through all movements I like, giving context, analysis, explanation and review.

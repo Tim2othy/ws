@@ -11,6 +11,12 @@ header_pages:
 markdown: kramdown
 permalink: /:title/
 
+# Collections
+collections:
+  drafts:
+    output: true
+    permalink: /drafts/:title/
+
 # Exclude from build
 exclude:
   - .git/

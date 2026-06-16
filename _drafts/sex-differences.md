@@ -1,3 +1,8 @@
+---
+layout: page
+title: What's an ideal society if innate Sex Differences exist
+---
+
 # Setup
 
 f I had to name one area where I think modern feminism is lacking I would say that it has almost no vision for what a good society looks like, assuming some sex differences exist.
