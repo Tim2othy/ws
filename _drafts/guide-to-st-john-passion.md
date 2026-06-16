@@ -1,5 +1,3 @@
-
-
 ---
 layout: page
 title: Guide to Bach's St John Passion
