@@ -13,5 +13,5 @@ Writing:
 Repos:
 - [Space Game](https://github.com/Tim2othy/spacegame): a simple 2d game set in space. With somewhat realistic physics.
 - [Agree Game](https://github.com/Tim2othy/agree-game): Testing humans epistemic modesty. Can we [Aumann agree](https://en.wikipedia.org/wiki/Aumann%27s_agreement_theorem)?
-- [threshold](https://github.com/Tim2othy/threshold): Small programm to simulate threshold effects.
+- [threshold](https://github.com/Tim2othy/threshold): Small program to simulate threshold effects.
 - [nn_golf.py](https://github.com/Tim2othy/tiny-nn/blob/main/nn_golf.py): Tiny [code golfed](https://en.wikipedia.org/wiki/Code_golf) neural network. (as of writing 684 bytes, 24 lines of code.)
