@@ -6,6 +6,10 @@ permalink: /projects/
 
 Some small things I've worked on for fun:
 
+Websites:
+- [Do Bayesian calculations](https://tim2othy.github.io/bayes-calc-site/)
+- [Visualisation of chaotic dynamics in the three body problem ](https://tim2othy.github.io/three-body-probability/)
+
 Writing:
 - My [Bachelor's Thesis](https://tim2othy.github.io/bachelorarbeit/) on how existential risk from AI is affected by race dynamics.
 - [Stochastische Modelle](https://github.com/Tim2othy/stochastische-modelle/releases): Helped write lecture notes for a course on stochastic models, using Typst (notes are in German).
