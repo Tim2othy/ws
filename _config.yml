@@ -5,7 +5,6 @@ header_pages:
   - projects.md
   - setup.md
   - posts.md
-  - writing.md
 
 # Build settings
 markdown: kramdown
