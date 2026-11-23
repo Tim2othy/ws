@@ -1,0 +1,65 @@
+# Builds the site and deploys it to GitHub Pages.
+# Paper PDFs are not stored in this repo: they are downloaded from the latest
+# release of the (private) paper repo at build time.
+#
+# Runs on: push to main, manual run, and a `paper-updated` event that the paper
+# repo sends after it publishes a new PDF release.
+#
+# Needs repo secret SITE_TOKEN: a fine-grained token with
+#   Tim2othy/bachelorarbeit -> Contents: read
+
+name: Build and deploy site
+
+on:
+  push:
+    branches: [main]
+  repository_dispatch:
+    types: [paper-updated]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download latest paper PDF
+        env:
+          GH_TOKEN: ${{ secrets.SITE_TOKEN }}
+        run: |
+          mkdir -p assets/papers
+          gh release download --repo Tim2othy/bachelorarbeit \
+            --pattern ai-risk-in-race.pdf --dir assets/papers --clobber
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+
+      # Same Jekyll version as the local install, so the local preview matches.
+      - name: Build with Jekyll
+        env:
+          JEKYLL_ENV: production
+        run: |
+          gem install jekyll -v 4.4.1 --no-document
+          jekyll build
+
+      - uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
