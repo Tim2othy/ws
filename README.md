@@ -1,12 +1,16 @@
-Hi.
+# ws
 
+Source for my personal Jekyll site.
+This file is for development only: it's in `exclude` in `_config.yml`, so it is never built or published.
 
-## Contact
+## Preview the site in a browser
 
-- Mail: [tjcuuu@gmail.com   ](mailto:tjcuuu@gmail.com).
-- [Github](https://github.com/Tim2othy).
-- [LinkedIn](https://www.linkedin.com/in/timothyjakobcurrie/)
+Needs Ruby and Jekyll (`gem install jekyll webrick`).
 
+From the repo root:
 
+```sh
+jekyll serve --livereload
+```
 
-I will reply if you write me a message.
+Then open <http://127.0.0.1:4000>.
