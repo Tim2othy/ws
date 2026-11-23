@@ -8,6 +8,10 @@ layout: default
     <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
       {{ page.date | date: "%B %d, %Y" }}
     </time>
+    {% if page.paper %}
+    {% assign paper_obj = site.pages | where: 'url', page.paper | first %}
+    <p class="post-paper">Paper: <a href="{{ page.paper | relative_url }}">{{ paper_obj.title | default: page.paper | escape }}</a></p>
+    {% endif %}
   </header>
 
   <div class="post-body">

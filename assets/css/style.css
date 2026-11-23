@@ -251,6 +251,12 @@ img {
     color: #666;
 }
 
+.post-paper {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    color: #666;
+}
+
 /* ===================================
    HOME (no sidebar)
    =================================== */
