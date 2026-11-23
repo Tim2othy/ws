@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | escape }} · {{ site.author | escape }}</title>
+    <style>
+        html, body { margin: 0; height: 100%; }
+        object { display: block; width: 100%; height: 100%; border: 0; }
+        p { font-family: Georgia, serif; padding: 2rem; }
+    </style>
+</head>
+
+<body>
+    <!-- Browser's built-in PDF viewer. Fallback link for browsers that can't embed PDFs (e.g. Android Chrome). -->
+    <object data="{{ page.pdf | relative_url }}" type="application/pdf" title="{{ page.title | escape }}">
+        <p><a href="{{ page.pdf | relative_url }}">Open the PDF: {{ page.title | escape }}</a></p>
+    </object>
+</body>
+
+</html>
