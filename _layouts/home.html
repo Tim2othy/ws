@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.author | escape }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="home">
+        <h1 class="home-title">{{ site.author | escape }}</h1>
+        <nav class="home-nav">
+            {% for item in site.header_pages %}
+            {% assign page_obj = site.pages | where: 'path', item | first %}
+            {% if page_obj %}
+            <a href="{{ page_obj.url | relative_url }}">{{ page_obj.title }}</a>
+            {% endif %}
+            {% endfor %}
+        </nav>
+    </main>
+</body>
+
+</html>
